@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Developing Data Products</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Developing Data Products">
+  <meta name="author" content="Diego Alfaro">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Developing Data Products</h1>
+    <h2>Final Project</h2>
+    <p>Diego Alfaro<br/>Data Analyst</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Project Background</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The project aims to build a pet age calculator, specifically for cats and different sizes of dogs. The tool follows this process:</p>
+
+<ol>
+<li>Gather the pet owner&#39;s current age, age when the pet was acquired and how old was the pet when acquired. </li>
+<li>Get the pet&#39;s type (cat or dog)</li>
+<li>Build a linear model used to predict the pet&#39;s age in human years.</li>
+<li>Plot the linear model that is used to forecast the pet&#39;s age in human years against the owner&#39;s age.</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Data Source</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The data to build the data models was gathered from different websites dedicated to the care of cats and dogs:</p>
+
+<ol>
+<li><a href="http://www.calculatorcat.com/cats/cat-years.phtml">http://www.calculatorcat.com/cats/cat-years.phtml</a></li>
+<li><a href="http://pets.webmd.com/dogs/how-to-calculate-your-dogs-age">http://pets.webmd.com/dogs/how-to-calculate-your-dogs-age</a></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Data Tables (1/2)</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The data from those websites is then used to build these data tables: (only first rows shown)</p>
+
+<p>Cat ages:</p>
+
+<pre><code>##   catAge humanAge
+## 1  0.083      0.5
+## 2  0.250      4.0
+## 3  0.500     10.0
+## 4  0.670     15.0
+## 5  1.000     18.0
+## 6  2.000     24.0
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Data Tables (2/2)</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The data from those websites is then used to build these data tables: (only first rows shown)</p>
+
+<p>Dog ages:</p>
+
+<pre><code>##   dogAge humanAge.SmallBreed humanAge.MediumBreed humanAge.LargeBreed
+## 1      1                  15                   15                  15
+## 2      2                  24                   24                  24
+## 3      3                  28                   28                  28
+## 4      4                  32                   32                  32
+## 5      5                  36                   36                  36
+## 6      6                  40                   42                  45
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Regression Models Fits</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>As shown in the plot below, the pets&#39; ages can be predicted with considerable accuracy through linear models.</p>
+
+<p><img src="assets/fig/unnamed-chunk-3-1.png" alt="plot of chunk unnamed-chunk-3"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Graphical Output</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Besides calculating the pet&#39;s age in Human years, a chart is plotted with the comparison of the pet&#39;s life span versus the owner&#39;s:</p>
+
+<p><img src="assets/fig/unnamed-chunk-4-1.png" alt="plot of chunk unnamed-chunk-4"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Project Background'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Data Source'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Data Tables (1/2)'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Data Tables (2/2)'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Regression Models Fits'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Graphical Output'>
+         6
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
